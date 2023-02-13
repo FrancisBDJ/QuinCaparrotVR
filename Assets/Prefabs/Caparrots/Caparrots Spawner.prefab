@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4661895925276088427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4661895925276088429}
+  - component: {fileID: 4661895925276088426}
+  m_Layer: 0
+  m_Name: Caparrots Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4661895925276088429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4661895925276088427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04853472, y: 0.5257878, z: 0.5030527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4661895925276088426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4661895925276088427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684f0c6d9cb766446b037dea3ecf4ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caparrotsPrefabs:
+  - {fileID: 7362053001216707754, guid: 083e37609f47f864fafbdaaf489cf727, type: 3}
+  - {fileID: 2499051509337969571, guid: 0b0926b72381524489a70e047816a23d, type: 3}
+  - {fileID: 8647149146433347263, guid: 9a4918ec7769d1d4d8d47cbdfc77f2d1, type: 3}
+  - {fileID: 1796907434636021089, guid: f9cd2de9997e31c47ba02d42a9ffd7de, type: 3}
+  - {fileID: 8219362988869631148, guid: 49eb2eb799e47934d89eecfd668c3d26, type: 3}
+  - {fileID: 1840552925695424229, guid: 2ba0d716a8257a949840b5738c6ca874, type: 3}
+  - {fileID: 5290823805424958920, guid: da0361f73ac514340a4d751ce5e2768b, type: 3}
+  - {fileID: 3195448571760969779, guid: 1f35bad79d7310148bfad4f1cb14aced, type: 3}
+  - {fileID: 228542211740470228, guid: e5d6e9b974257194bba4149df0e69405, type: 3}
+  - {fileID: 3242663975942557520, guid: 17dd6faa3629e384c906162422a02aea, type: 3}
+  - {fileID: 8757301282314154202, guid: 22bf6776a2922dd45a643cd70c2c9c65, type: 3}
