@@ -64,7 +64,7 @@ public class PlaceHolderChecker : MonoBehaviour
                         }
                     }
 
-                    win = true;
+                    bool win = true;
                     foreach (var objects in objectPlaced)
                     {
                         if (objects == false)
