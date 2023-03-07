@@ -64,16 +64,12 @@ public class GameManager : MonoBehaviour
         File.WriteAllText(filePath, jsonString);
 
 
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("Game Over");
     }
     
     public void EndGame()
     {
         _timer.StopTimer();
-        _player.gameObject.GetComponent<PlayerController>().enabled = false;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 0;
         if (win.Value)
         {
             txtPoints.text = "Points: " + points;
@@ -81,18 +77,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Game Over");
         }
     }
 
     public void InitLevel()
     {
         _timer = FindObjectOfType<Timer>();
-        _player = GameObject.FindWithTag("Player");
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale = 1;
-        win.Value = false;
-        scoreBckgrnd.gameObject.SetActive(false);
+       
     }
 }

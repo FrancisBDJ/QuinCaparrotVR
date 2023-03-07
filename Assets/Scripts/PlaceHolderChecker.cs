@@ -45,10 +45,5 @@ public class PlaceHolderChecker : MonoBehaviour
         
     }
 
-    IEnumerator button(Transform transform)
-    {
-        transform.position -= new Vector3(0, 0.05f, 0);
-        yield return new WaitForSecondsRealtime(0.05f);
-        transform.position += new Vector3(0, 0.05f, 0);
-    }
+    
 }
