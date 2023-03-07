@@ -42,51 +42,7 @@ public class PlaceHolderChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange))
-            {
-                if (hit.transform.CompareTag("Button") && _gameManager.win.Value != true)
-                {
-                    _blinkCheck.buttonHit = true;
-                    StartCoroutine(button(hit.transform));
-
-                    for (int i = 0; i < objectPlaced.Count; i++)
-                    {
-                        if (objectPlaced[i])
-                        {
-                            placeHolders[i].GetComponent<MeshRenderer>().material.color = Color.green;
-                        }
-                        else
-                        {
-                            placeHolders[i].GetComponent<MeshRenderer>().material.color = Color.red;
-                        }
-                    }
-
-                    bool win = true;
-                    foreach (var objects in objectPlaced)
-                    {
-                        if (objects == false)
-                        {
-                            win = false;
-                            _gameManager.points -= 200;
-
-                            if (_gameManager.points <= 0)
-                            {
-                                _gameManager.points = 0;
-                            }
-                        }
-                    }
-
-                    if (win)
-                    {
-                        _gameManager.win.Value = true;
-                        _gameManager.EndGame();
-                    }
-                }
-            }
-        }
+        
     }
 
     IEnumerator button(Transform transform)

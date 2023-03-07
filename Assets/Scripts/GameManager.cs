@@ -31,14 +31,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (userInput.text == String.Empty || userInput.text == null)
+       /* if (userInput.text == String.Empty || userInput.text == null)
         {
             btnConfirm.interactable = false;
         }
         else
         {
             btnConfirm.interactable = true;
-        }
+        }*/
     }
     
     private void Confirm()
