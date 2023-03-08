@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3453268900264797797}
   - component: {fileID: 3453268900264797798}
   - component: {fileID: 6282898143262117152}
-  - component: {fileID: 493643005728417968}
   - component: {fileID: 1679288937832757488}
   m_Layer: 0
   m_Name: ButtonChecker2
@@ -199,18 +198,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
---- !u!114 &493643005728417968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3453268900264797792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fb69328c9cdb1469ad44bf15a253a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1679288937832757488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,4 +213,3 @@ MonoBehaviour:
   objectPlaced: 
   caparrotsInPedestals: 
   placeHolders: []
-  pickupRange: 5
