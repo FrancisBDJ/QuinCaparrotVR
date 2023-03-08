@@ -10,9 +10,9 @@ public class PlaceHolderChecker : MonoBehaviour
     public List<bool> caparrotsInPedestals;
     public List<GameObject> placeHolders;
     private GameManager _gameManager;
-    private BlinkCheck _blinkCheck;
+    
 
-    [SerializeField] private float pickupRange = 5.0f;
+    
 
 
     public void CheckObjectsPlacedInPedestals()
@@ -34,7 +34,7 @@ public class PlaceHolderChecker : MonoBehaviour
     void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
-        _blinkCheck = FindObjectOfType<BlinkCheck>();
+        
 
         objectPlaced = Enumerable.Repeat(false, placeHolders.Count).ToList();
         caparrotsInPedestals = Enumerable.Repeat(false, placeHolders.Count).ToList();

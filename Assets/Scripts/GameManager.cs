@@ -15,11 +15,12 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
     private Timer _timer;
     public int points = 10000;
+    [SerializeField] private Canvas scoreCanvas;
     [SerializeField] private TextMeshProUGUI username;
     [SerializeField] private TMP_InputField userInput;
     [SerializeField] private Button btnConfirm;
     [SerializeField] private TextMeshProUGUI txtPoints;
-    [SerializeField] private RawImage scoreBckgrnd;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +74,7 @@ public class GameManager : MonoBehaviour
         if (win.Value)
         {
             txtPoints.text = "Points: " + points;
-            scoreBckgrnd.gameObject.SetActive(true);
+            scoreCanvas.gameObject.SetActive(true);
         }
         else
         {
