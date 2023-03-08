@@ -10,22 +10,46 @@ public class PlaceHolderChecker : MonoBehaviour
     public List<bool> caparrotsInPedestals;
     public List<GameObject> placeHolders;
     private GameManager _gameManager;
-    
+    private bool win = false;
 
     
 
 
     public void CheckObjectsPlacedInPedestals()
     {
-        for (int i = 0; i < objectPlaced.Count; i++)
+        if (_gameManager.winSO.Value != true)
         {
-            if (objectPlaced[i])
+            for (int i = 0; i < objectPlaced.Count; i++)
             {
-                placeHolders[i].GetComponent<MeshRenderer>().material.color = Color.green;
+                if (objectPlaced[i])
+                {
+                    placeHolders[i].GetComponent<MeshRenderer>().material.color = Color.green;
+                }
+                else
+                {
+                    placeHolders[i].GetComponent<MeshRenderer>().material.color = Color.red;
+                }
             }
-            else
+
+            win = true;
+            foreach (var objects in objectPlaced)
             {
-                placeHolders[i].GetComponent<MeshRenderer>().material.color = Color.red;
+                if (objects == false)
+                {
+                    win = false;
+                    _gameManager.points -= 200;
+
+                    if (_gameManager.points <= 0)
+                    {
+                        _gameManager.points = 0;
+                    }
+                }
+            }
+
+            if (win)
+            {
+                _gameManager.winSO.Value = true;
+                _gameManager.EndGame();
             }
         }
     }

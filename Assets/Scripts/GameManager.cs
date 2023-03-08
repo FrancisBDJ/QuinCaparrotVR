@@ -11,13 +11,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //public bool win;
-    [SerializeField] public BooleanSO win;
+    public BooleanSO winSO;
     private GameObject _player;
     private Timer _timer;
     public int points = 10000;
     [SerializeField] private Canvas scoreCanvas;
-    [SerializeField] private TextMeshProUGUI username;
-    [SerializeField] private TMP_InputField userInput;
     [SerializeField] private Button btnConfirm;
     [SerializeField] private TextMeshProUGUI txtPoints;
     
@@ -32,14 +30,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if (userInput.text == String.Empty || userInput.text == null)
-        {
-            btnConfirm.interactable = false;
-        }
-        else
-        {
-            btnConfirm.interactable = true;
-        }*/
+       
     }
     
     private void Confirm()
@@ -56,7 +47,7 @@ public class GameManager : MonoBehaviour
         
         
         PlayerInfoClass player = new PlayerInfoClass();
-        player.Name = userInput.text;
+        player.Name = "Francis";
         player.Points = points;
 
         
@@ -71,9 +62,9 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         _timer.StopTimer();
-        if (win.Value)
+        if (winSO.Value)
         {
-            txtPoints.text = "Points: " + points;
+            txtPoints.text = "Congratulations! You Win with " + points + " points";
             scoreCanvas.gameObject.SetActive(true);
         }
         else

@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
         }
         else
         { 
-            _gameManager.win.Value = false; 
+            _gameManager.winSO.Value = false; 
             _gameManager.EndGame();
         }
 

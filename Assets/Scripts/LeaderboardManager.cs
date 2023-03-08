@@ -32,7 +32,7 @@ public class LeaderboardManager : MonoBehaviour
                 {
                     break;
                 }
-                leaderBoardPlayers[i].transform.Find("txtPlayer").GetComponent<TextMeshProUGUI>().text = playersInfo.PlayersInfos[i].Name;
+                leaderBoardPlayers[i].transform.Find("txtUsername").GetComponent<TextMeshProUGUI>().text = playersInfo.PlayersInfos[i].Name;
                 leaderBoardPlayers[i].transform.Find("txtPoints").GetComponent<TextMeshProUGUI>().text = playersInfo.PlayersInfos[i].Points.ToString();
             } 
         }
