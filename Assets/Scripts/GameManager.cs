@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         
         
         PlayerInfoClass player = new PlayerInfoClass();
-        player.Name = "Francis";
+        player.Name = "You";
         player.Points = points;
 
         
