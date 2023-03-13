@@ -1850,6 +1850,8 @@ GameObject:
   - component: {fileID: 4849285595503940065}
   - component: {fileID: 4849285595503940074}
   - component: {fileID: 4849285595503940075}
+  - component: {fileID: 670469055094783926}
+  - component: {fileID: 4295941012888007213}
   m_Layer: 0
   m_Name: XR Origin Level1
   m_TagString: Untagged
@@ -2040,6 +2042,58 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 4849285595503940065}
   m_MinHeight: 0
   m_MaxHeight: Infinity
+--- !u!114 &670469055094783926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849285595503940066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 4849285595503940079}
+  m_TurnSpeed: 60
+  m_LeftHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 1d36f4d3-b1da-4292-b866-891b42c95c76
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e0a8635f-0fed-4b4b-ade1-8e91ef9f5af5
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+--- !u!114 &4295941012888007213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849285595503940066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 4849285595503940079}
+  m_DelayTime: 0
 --- !u!1 &4849285595516796598
 GameObject:
   m_ObjectHideFlags: 0

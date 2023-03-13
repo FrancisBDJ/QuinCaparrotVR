@@ -36,7 +36,7 @@ public class OptionsManager : MonoBehaviour
             ContMovent = PlayerPrefs.GetInt("movement");
         }
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Level1");
     }
     // Start is called before the first frame update
     void Start()
