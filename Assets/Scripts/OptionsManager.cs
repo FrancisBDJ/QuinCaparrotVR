@@ -33,7 +33,8 @@ public class OptionsManager : MonoBehaviour
         }
         else
         {
-            ContMovent = PlayerPrefs.GetInt("movement");
+            PlayerPrefs.SetInt("movement", ContMovent);
+            PlayerPrefs.Save();
         }
 
         SceneManager.LoadScene("Level1");

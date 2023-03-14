@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public ActionBasedContinuousTurnProvider ContTurn;
     public TeleportationProvider Teleport;
     public ActionBasedSnapTurnProvider SnapTurn;
-
+    public GameObject TeleportMaps;
     public int Movement;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         ContTurn = _player.GetComponent<ActionBasedContinuousTurnProvider>();
         Teleport = _player.GetComponent<TeleportationProvider>();
         SnapTurn = _player.GetComponent<ActionBasedSnapTurnProvider>();
-
+        TeleportMaps = GameObject.FindWithTag("Maps");
         SelectedMovement();
     }
 
@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
                 ContTurn.enabled = true;
                 Teleport.enabled = false;
                 SnapTurn.enabled = false;
+                TeleportMaps.SetActive(false);
             }
             else
             {
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
                 ContTurn.enabled = false;
                 Teleport.enabled = true;
                 SnapTurn.enabled = true;
+                TeleportMaps.SetActive(true);
             }
         }
         else
@@ -72,6 +74,7 @@ public class GameManager : MonoBehaviour
             ContTurn.enabled = false;
             Teleport.enabled = true;
             SnapTurn.enabled = true;
+            TeleportMaps.SetActive(true);
         }
        
         
