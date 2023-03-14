@@ -503,7 +503,6 @@ GameObject:
   - component: {fileID: 558638434}
   - component: {fileID: 558638433}
   - component: {fileID: 558638432}
-  - component: {fileID: 558638431}
   m_Layer: 0
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -511,25 +510,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &558638431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558638430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed368268c7d51b94da20fe8e0a5d3620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btnRestart: {fileID: 0}
-  btnMenu: {fileID: 0}
-  btnQuit: {fileID: 0}
-  losePanel: {fileID: 0}
-  winPanel: {fileID: 0}
-  txtWin: {fileID: 0}
-  winSO: {fileID: 0}
 --- !u!114 &558638432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,7 +684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878207733
 GameObject:
