@@ -19,8 +19,8 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private Button btnQuit;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject winPanel;
-    [SerializeField] private TextMeshProUGUI txtWin;
     public BooleanSO winSO;
+    [SerializeField] private GameObject[] leaderBoardPlayers;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +34,17 @@ public class GameOverManager : MonoBehaviour
             losePanel.gameObject.SetActive(false);
             winPanel.gameObject.SetActive(true);
             var filePath = Path.Combine(Application.persistentDataPath, "Leaderboard.json");
-            if (File.Exists(filePath))
+            AllPlayersInfoClass playersInfo = JsonConvert.DeserializeObject<AllPlayersInfoClass>(File.ReadAllText(filePath));
+            playersInfo.PlayersInfos = playersInfo.PlayersInfos.OrderByDescending(x => x.Points).ToList();
+            for (int i = 0; i < leaderBoardPlayers.Length; i++)
             {
-                var playersInfo = JsonConvert.DeserializeObject<AllPlayersInfoClass>(File.ReadAllText(filePath));
-                playersInfo.PlayersInfos = playersInfo.PlayersInfos.ToList();
-                PlayerInfoClass lastPlayer = playersInfo.PlayersInfos[playersInfo.PlayersInfos.Count - 1];
-                txtWin.text = "Congratulations!" + lastPlayer.Name + "Win with " + lastPlayer.Points + " points";
-            }
+                if (i >= playersInfo.PlayersInfos.Count)
+                {
+                    break;
+                }
+                leaderBoardPlayers[i].transform.Find("txtUsername").GetComponent<TextMeshProUGUI>().text = playersInfo.PlayersInfos[i].Name;
+                leaderBoardPlayers[i].transform.Find("txtPoints").GetComponent<TextMeshProUGUI>().text = playersInfo.PlayersInfos[i].Points.ToString();
+            } 
         }
     }
 
