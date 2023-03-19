@@ -1677,7 +1677,12 @@ MonoBehaviour:
   losePanel: {fileID: 537736997}
   winPanel: {fileID: 1010991743}
   winSO: {fileID: 11400000, guid: edcb0cdb950b4024da791e9320fc4d8d, type: 2}
-  leaderBoardPlayers: []
+  leaderBoardPlayers:
+  - {fileID: 707712615}
+  - {fileID: 1172679475}
+  - {fileID: 38769183}
+  - {fileID: 279146353}
+  - {fileID: 237785739}
 --- !u!1 &1115315234
 GameObject:
   m_ObjectHideFlags: 0
